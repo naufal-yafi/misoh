@@ -2,9 +2,11 @@
   "name": "misoh",
   "version": "1.0.0",
   "description": "sensored word",
-  "main": "index.js",
+  "type": "module",
   "scripts": {
-    "start": "jest"
+    "start": "jest test/main.test.ts",
+    "dev": "tsc -w",
+    "prod": "tsc"
   },
   "jest": {
     "transform": {
