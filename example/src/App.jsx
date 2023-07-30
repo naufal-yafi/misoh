@@ -1,7 +1,8 @@
-import misoh from "../../dist/misoh-20230730-0721.bundle";
 import React, { useState } from 'react';
-import dateFormat from "./function/DateFormat";
 import ListData from "./components/ListData";
+import dateFormat from "./function/DateFormat";
+import misoh from './function/misoh-20230730-0721.bundle';
+import styleMessage from './function/styleMessage';
 
 const App = () => {
   const [messageInput, setMessageInput] = useState("");
@@ -20,7 +21,7 @@ const App = () => {
         const input = misoh(messageInput);
 
         setMessagesList([...messageList, {
-          text: input,
+          text: styleMessage(input),
           date: dateFormat(),
           color: 'green-500'
         }]);
