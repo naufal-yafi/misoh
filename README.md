@@ -6,6 +6,15 @@ Dikarenakan nanti saya akan membuat aplikasi chatting jadi saya memerlukan tool 
 
 Untuk sekarang ini masih terdapat 18 kata kotor https://github.com/naufal-yafi/misoh/blob/main/src/datas.ts. Oleh karena itu, saya perlu bantuan teman - teman semua.
 
+#### Contoh Aplikasi
+
+[Visit Site Now](https://misoh-chat-app.netlify.app/)
+
+```
+Command:
+    - clear : to clean all chat
+```
+
 #### Bagaimana menggunakan tool ini?
 
 1. Silahkan unduh repo ini terlebih dahulu
