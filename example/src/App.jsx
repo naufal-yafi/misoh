@@ -19,12 +19,24 @@ const App = () => {
     } else {
       if (messageInput != "") {
         const input = misoh(messageInput);
+        const patternJS = /<script\b[^>]*>|<\/script>/i;
 
-        setMessagesList([...messageList, {
-          text: styleMessage(input),
-          date: dateFormat(),
-          color: 'green-500'
-        }]);
+        if (patternJS.test(input)) {
+          setMessagesList([...messageList, {
+            text: "Not Allowed !",
+            date: "ERROR",
+            color: 'black',
+            error: true
+          }]);
+        } else {
+          setMessagesList([...messageList, {
+            text: styleMessage(input),
+            date: dateFormat(),
+            color: 'green-500',
+            error: false
+          }]);
+        }
+
         setMessageInput("");
       } 
     }
@@ -37,13 +49,13 @@ const App = () => {
   }
 
   return (
-    <div className="container">
-      <main className="px-2 pt-1 pb-20"><ListData messageList={messageList}/></main>
+    <div className="pb-5 w-full">
+      <main className="px-2 pt-1 w-full"><ListData messageList={messageList}/></main>
 
-      <footer className="fixed flex flex-col gap-0 justify-center items-start bottom-0 left-0 w-full bg-black">
+      <footer className="flex flex-col gap-0 justify-center items-start w-full bg-black pb-2">
         <span className="text-sm mb-0 w-full px-2 pt-1 pb-0">
           <span className="text-green-500">
-            anonymous@internetrelaychat <span className="text-purple-500">CHATAPP</span> <span className="text-red-500">~</span>
+            anonymous@internetrelaychat <span className="text-purple-500">CHATAPP</span> <span className="text-red-500">chat-mode</span>
           </span>
         </span>
         <span className="text-white flex w-full items-center mt-0 px-2 py-0">
