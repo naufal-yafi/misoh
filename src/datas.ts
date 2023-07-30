@@ -16,7 +16,24 @@ const badWordList: ReadonlyArray<String> = [
     "babi",
     "b4b1",
     "b4bi",
-    "bab1"
+    "bab1",
+    "jingan",
+    "pler",
+    "peler",
+    "ntol",
+    "ajg",
+    "kntl",
+    "mmk",
+    "yatim",
+    "yteam",
+    "pepek",
+    "kemem",
+    "tempek",
+    "ngentot",
+    "tai",
+    "anjing",
+    "fuck",
+    "shit"
 ];
 
 export default badWordList;
