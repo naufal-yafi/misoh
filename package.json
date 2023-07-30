@@ -7,7 +7,8 @@
     "start": "tsc -w",
     "test": "jest",
     "dev": "tsc -w",
-    "prod": "tsc && rollup -c"
+    "prod": "tsc && rollup -c",
+    "misoh-react": "tsc && rollup -c"
   },
   "repository": {
     "type": "git",

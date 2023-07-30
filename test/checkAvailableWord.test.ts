@@ -13,3 +13,9 @@ test(`Test ${number++}`, () => {
         checkWord('cipokan')
     ).toBe(false);
 });
+
+test(`Test ${number++}`, () => {
+    expect(
+        checkWord('bangsat')
+    ).toBe(false);
+});

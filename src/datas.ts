@@ -33,7 +33,9 @@ const badWordList: ReadonlyArray<String> = [
     "tai",
     "anjing",
     "fuck",
-    "shit"
+    "shit",
+    "cipok",
+    "bangsat"
 ];
 
 export default badWordList;
