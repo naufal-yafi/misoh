@@ -6,6 +6,7 @@
   "scripts": {
     "start": "cd example && npm run dev && cd ..",
     "test": "jest",
+    "sum": "jest ./test/sumData.test.ts",
     "dev": "rm -rf build && tsc && rollup -c rollup.config.dev.js",
     "prod": "rm -rf build && tsc && rollup -c rollup.config.prod.js",
     "clear": "rm -rf build dist",
