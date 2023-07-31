@@ -4,11 +4,13 @@
   "description": "sensored word",
   "type": "module",
   "scripts": {
-    "start": "tsc -w",
+    "start": "cd example && npm run dev && cd ..",
     "test": "jest",
-    "dev": "tsc -w",
-    "prod": "tsc && rollup -c rollup.config.js",
-    "misoh": "tsc && rollup -c rollup.config.prod.js"
+    "dev": "rm -rf build && tsc && rollup -c rollup.config.dev.js",
+    "prod": "rm -rf build && tsc && rollup -c rollup.config.prod.js",
+    "clear": "rm -rf build dist",
+    "setup": "cd example && npm i && cd .. && npm run prod",
+    "check": "cd ./example/src/function && node getFile.js && cd .. && cd .. && cd .."
   },
   "repository": {
     "type": "git",

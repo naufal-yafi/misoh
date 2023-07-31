@@ -16,13 +16,24 @@ function dateFormat() {
 
 export default {
     input: "./build/main.js",
-    output: {
-        file: `./dist/misoh-${dateFormat()}.bundle.minify.js`,
-        format: "es"
-    },
+    output: [
+        {
+            file: `./example/src/tools/misoh-${dateFormat()}.bundle.minify.js`,
+            format: "es"
+        },
+        {
+            file: `./dist/bundle&minify/misoh-${dateFormat()}.bundle.minify.js`,
+            format: "es"
+        }
+    ],
     plugins: [
         nodeResolve(), 
         commonjs(),
-        terser()
+        terser({
+            mangle: {
+                properties: false,
+                reserved: ['misoh']
+            }
+        })
     ]
 }
