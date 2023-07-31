@@ -1,4 +1,4 @@
-import misoh from "./misoh-20230730-0721.bundle";
+import misoh from "./misoh-20230731-0746.bundle.minify";
 import dateFormat from "./DateFormat";
 import styleMessage from "./styleMessage";
 

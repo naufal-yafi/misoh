@@ -22,7 +22,7 @@ const App = () => {
       <footer className="flex flex-col gap-0 justify-center items-start w-full bg-black pb-2">
         <span className="text-sm mb-0 w-full px-2 pt-1 pb-0">
           <span className="text-green-500">
-            anonymous@internetrelaychat <span className="text-purple-500">CHATAPP</span> <span className="text-red-500">~chat-mode</span>
+            anon@local <span className="text-purple-500">CHATAPP</span> <span className="text-red-500">~chat-mode</span>
           </span>
         </span>
 

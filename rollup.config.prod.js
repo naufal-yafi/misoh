@@ -1,3 +1,7 @@
+import { terser } from 'rollup-plugin-terser';
+import commonjs from '@rollup/plugin-commonjs';
+import nodeResolve from '@rollup/plugin-node-resolve';
+
 function dateFormat() {
     const currentDate = new Date();
 
@@ -13,7 +17,12 @@ function dateFormat() {
 export default {
     input: "./build/main.js",
     output: {
-        file: `./dist/misoh-${dateFormat()}.bundle.js`,
+        file: `./dist/misoh-${dateFormat()}.bundle.minify.js`,
         format: "es"
-    }
+    },
+    plugins: [
+        nodeResolve(), 
+        commonjs(),
+        terser()
+    ]
 }
