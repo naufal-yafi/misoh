@@ -4,10 +4,13 @@
   "description": "sensored word",
   "type": "module",
   "scripts": {
-    "start": "tsc -w",
+    "start": "cd example && npm run dev && cd ..",
     "test": "jest",
-    "dev": "tsc -w",
-    "prod": "tsc && rollup -c"
+    "dev": "rm -rf build && tsc && rollup -c rollup.config.dev.js",
+    "prod": "rm -rf build && tsc && rollup -c rollup.config.prod.js",
+    "clear": "rm -rf build dist",
+    "setup": "cd example && npm i && cd .. && npm run prod",
+    "check": "cd ./example/src/function && node getFile.js && cd .. && cd .. && cd .."
   },
   "repository": {
     "type": "git",
@@ -27,12 +30,14 @@
   "devDependencies": {
     "@babel/preset-env": "^7.22.9",
     "@babel/preset-typescript": "^7.22.5",
+    "@rollup/plugin-commonjs": "^25.0.3",
+    "@rollup/plugin-node-resolve": "^15.1.0",
     "@types/jest": "^29.5.3",
     "babel-jest": "^29.6.2",
     "jest": "^29.6.2",
     "rollup": "^3.27.0",
+    "rollup-plugin-terser": "^7.0.2",
     "ts-jest": "^29.1.1",
-    "typescript": "^5.1.6",
-    "webpack-cli": "^5.1.4"
+    "typescript": "^5.1.6"
   }
 }

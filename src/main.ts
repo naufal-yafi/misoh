@@ -3,7 +3,7 @@ import estimated from "./estimated";
 import remove from "./remove";
 
 function misoh(messages: string): string {
-    const pattern: RegExp = new RegExp(`\\b(${badWordList.join('|')})\\b`, 'gi');
+    const pattern: RegExp = new RegExp(`\\b(${badWordList.map(word => word.replace(/\W/g, '\\$&')).join('|')})\\b`, 'gi');
 
     return messages.replace(pattern, (message) => {
         const wordLength: number = message.length;

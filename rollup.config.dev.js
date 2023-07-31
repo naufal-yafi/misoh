@@ -13,7 +13,7 @@ function dateFormat() {
 export default {
     input: "./build/main.js",
     output: {
-        file: `./dist/misoh-${dateFormat()}.bundle.js`,
-        format: "cjs"
+        file: `./dist/bundle/misoh-${dateFormat()}.bundle.js`,
+        format: "es"
     }
 }
