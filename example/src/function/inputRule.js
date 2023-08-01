@@ -1,4 +1,4 @@
-import misoh from "./../tools/misoh-20230731-0928.bundle.minify.js";
+import misoh from "./../tools/misoh-20230801-1129.bundle.minify.js"
 import dateFormat from "./DateFormat";
 import styleMessage from "./styleMessage";
 

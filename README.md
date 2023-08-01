@@ -1,10 +1,10 @@
-![totalDownloads](https://img.shields.io/github/downloads/naufal-yafi/misoh/total?color=orange&style=flat-square) ![size](https://img.shields.io/github/repo-size/naufal-yafi/misoh?color=orange&style=flat-square) ![contributor](https://img.shields.io/github/contributors/naufal-yafi/misoh?color=orange&style=flat-square)
+![totalDownloads](https://img.shields.io/github/downloads/naufal-yafi/misoh/total?color=blue&style=flat-square) ![size](https://img.shields.io/github/repo-size/naufal-yafi/misoh?color=blue&style=flat-square) ![contributor](https://img.shields.io/github/contributors/naufal-yafi/misoh?color=blue&style=flat-square)
 
 # Misoh
 
 This is simple JavaScript logic to censor certain words in certain text using Regular Expressions (RegEx). The logic allows you to specify the word you want to censor and the replacement word for it.
 
-[![Download Latest Version](https://img.shields.io/badge/Download%20Latest%20Version-orange?style=for-the-badge&logo=javascript&logoColor=fafafa)](https://github.com/naufal-yafi/misoh/releases/download/misoh-20230731/misoh-20230731-1305.bundle.minify.js)
+[![Download Latest Version](https://img.shields.io/badge/Download%20Latest%20Version-blue?style=for-the-badge&logo=javascript&logoColor=fafafa)](https://github.com/naufal-yafi/misoh/releases/download/misoh-20230731/misoh-20230731-1305.bundle.minify.js)
 
 ### Table of Contents
 
@@ -27,14 +27,20 @@ This is simple JavaScript logic to censor certain words in certain text using Re
       - [6.2 Example](#62-example)
       - [6.3 Available Commands](#63-available-commands)
     - [7. Installation Example App](#7-installation-example-app)
-    - [8. How to Run Example App?](#8-how-to-run-example-app)
-    - [9. Feature Example App](#9-feature-example-app)
-    - [10. How do I Contribute](#10-how-do-i-contribute)
-      - [10.1 Adding Bad Word](#101-adding-bad-word)
-      - [10.2 Validate Your New Bad Word](#102-validate-your-new-bad-word)
-      - [10.3 Running Unit Testing](#103-running-unit-testing)
-      - [10.4 Result Unit Testing](#104-result-unit-testing)
-      - [10.5 See Total Bad Words](#105-see-total-bad-words)
+      - [7.1 Download all dependencies](#71-download-all-dependencies)
+      - [7.2 Checks if misoh-\[date\]-\[time\].bundle.minify.js is available](#72-checks-if-misoh-date-timebundleminifyjs-is-available)
+      - [7.3 Running example app](#73-running-example-app)
+    - [8. Feature Example App](#8-feature-example-app)
+      - [8.1 Clear all chat](#81-clear-all-chat)
+      - [8.2 Mark @gmail, number, symbol and badword](#82-mark-gmail-number-symbol-and-badword)
+      - [8.3 Error empty message](#83-error-empty-message)
+      - [8.4 Error not allowed message](#84-error-not-allowed-message)
+    - [9. How do I Contribute](#9-how-do-i-contribute)
+      - [9.1 Adding Bad Word](#91-adding-bad-word)
+      - [9.2 Validate Your New Bad Word](#92-validate-your-new-bad-word)
+      - [9.3 Running Unit Testing](#93-running-unit-testing)
+      - [9.4 Result Unit Testing](#94-result-unit-testing)
+      - [9.5 See Total Bad Words](#95-see-total-bad-words)
 
 ### 1. Why I Make this Repo?
 
@@ -145,7 +151,7 @@ bitch => b****.
 ### 5. How the System Works?
 ```
 misoh
-├── build                   # result compile from ts file to js
+├── build                             # result compile from /src/*.ts
 │   ├── datas.js          
 │   ├── estimated.js    
 │   ├── main.js    
@@ -153,42 +159,42 @@ misoh
 │
 ├── dist
 │   ├── bundle    
-│   │   └── misoh-[date]-[time].bundle.js
+│   │   └── misoh-[date]-[time].bundle.js           # result bundling js code
 │   │
 │   └── bundle&minify
-│       └── misoh-[date]-[time].bundle.minify.js
+│       └── misoh-[date]-[time].bundle.minify.js    # result bundling and minify js code
 │
-├── example
-│
-├── ...
-│
-├── src                     # the folder that holds the raw code
-│   ├── check.ts            # the file used for testing whether the bad word is not in badWordList datas.ts 
-│   ├── datas.ts            # file that holds all the bad words
-│   ├── estimated.ts        # a file that specifies how many letters to censor with the * symbol
-│   ├── main.ts             # file yang menjalankan fungsi dari file - file lain dan melakukan seleksi kata buruk
-│   └── remove.ts           # file that specifies how many letters will not be censored with the * symbol
-│
-├── test                             #
-│   ├── checkAvailableWord.test.ts   #      
-│   ├── main.test.ts                 #
-│   └── sumData.test.ts              #
+├── example                          # react project / example app
 │
 ├── ...
 │
-├── babel.config.json       #
+├── src                              # the folder that holds the raw code
+│   ├── check.ts                     # the file used for testing whether the bad word is not in badWordList datas.ts 
+│   ├── datas.ts                     # file that holds all the bad words
+│   ├── estimated.ts                 # a file that specifies how many letters to censor with the * symbol
+│   ├── main.ts                      # file yang menjalankan fungsi dari file - file lain dan melakukan seleksi kata buruk
+│   └── remove.ts                    # file that specifies how many letters will not be censored with the * symbol
 │
-├── jest.config.mjs         #  
+├── test                             
+│   ├── checkAvailableWord.test.ts   # to know the bad word does not yet exist     
+│   ├── main.test.ts                 # to find out if the word sensor is working properly
+│   └── sumData.test.ts              # to know how many bad words
 │
 ├── ...
 │
-├── package.json            #
+├── babel.config.json                # configuration ts babel
 │
-├── rollup.config.dev.js    #
+├── jest.config.mjs                  # configuration running unit testing
 │
-├── rollup.config.prod.js   #
+├── ...
 │
-└── tsconfig.json           #
+├── package.json                     # manage dependencies and dev command
+│
+├── rollup.config.dev.js             # configuration bundling js code
+│
+├── rollup.config.prod.js            # configuration bundling and minify js code
+│
+└── tsconfig.json                    # configuration compile ts to js
 ```
 
 [[Back to Table of Contents]](#table-of-contents)
@@ -226,13 +232,75 @@ You can see all available command on file [package.json](./package.json).
 
 ### 7. Installation Example App
 
-### 8. How to Run Example App?
+#### 7.1 Download all dependencies
 
-### 9. Feature Example App
+```sh
+npm run setup
+```
 
-### 10. How do I Contribute
+#### 7.2 Checks if misoh-[date]-[time].bundle.minify.js is available
 
-#### 10.1 Adding Bad Word
+```sh
+npm run check
+```
+
+If the output is like this you can directly run the apk with `npm start`
+
+```sh
+> misoh@1.0.0 check
+> cd ./example/src/function && node getFile.js && cd .. && cd .. && cd ..
+
+Available Files:  [
+  'misoh-20230801-1035.bundle.minify.js',
+  'misoh-20230801-1112.bundle.minify.js'
+]
+
+[✓] Choose file misoh-20230801-1112.bundle.minify.js
+[✓] Update success ./example/src/function/inputRule.js
+```
+
+If the output message is "Not Available File" type `npm run prod` and type the command `npm run` check again
+
+```sh
+> misoh@1.0.0 check
+> cd ./example/src/function && node getFile.js && cd .. && cd .. && cd ..
+
+
+[✕] Not Available File
+Type: npm run prod
+```
+
+#### 7.3 Running example app
+
+```sh
+npm start
+```
+
+### 8. Feature Example App
+
+#### 8.1 Clear all chat
+
+```sh
+clear
+```
+
+#### 8.2 Mark @gmail, number, symbol and badword
+
+![mark feature](https://github.com/naufal-yafi/misoh/assets/87789251/bfa722da-7b84-4ac9-a429-0e3e685a4e38)
+
+#### 8.3 Error empty message
+
+![image](https://github.com/naufal-yafi/misoh/assets/87789251/6b5456c8-fb98-4339-96e1-98e16ecd6205)
+
+#### 8.4 Error not allowed message
+
+Example if you type `<script></script>`.
+
+![image](https://github.com/naufal-yafi/misoh/assets/87789251/e3fa8316-a7b0-4310-bcaf-01651dfc6a48)
+
+### 9. How do I Contribute
+
+#### 9.1 Adding Bad Word
 
 If you want to contribute in adding bad words. You can add it in [/src/datas.ts](./src/datas.ts) file. 
 
@@ -253,7 +321,7 @@ export default badWordList;
 
 **[ !!! ] But before that, first check the word you want to add whether it already exists or not by testing it in the [/test/checkAvailableWord.test.ts](./test/checkAvailableWord.test.ts) file. [ !!! ]**
 
-#### 10.2 Validate Your New Bad Word
+#### 9.2 Validate Your New Bad Word
 
 ```js
 // ./test/checkAvailableWord.test.ts
@@ -265,13 +333,13 @@ test(`Test ${number++}`, () => {
 });
 ```
 
-#### 10.3 Running Unit Testing
+#### 9.3 Running Unit Testing
 
 ```sh
 npm run test
 ```
 
-#### 10.4 Result Unit Testing
+#### 9.4 Result Unit Testing
 
 If the result fails as below. Then the bad word is already there, try to find another bad word.
 
@@ -294,7 +362,7 @@ If the result fails as below. Then the bad word is already there, try to find an
       10 |
 ```
 
-#### 10.5 See Total Bad Words
+#### 9.5 See Total Bad Words
 
 ```sh
 npm run sum
@@ -309,4 +377,4 @@ console.log
 
 [[Back to Table of Contents]](#table-of-contents)
 
-<small>31/06/2023</small>
+<small>01/08/2023</small>
