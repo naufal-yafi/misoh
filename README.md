@@ -35,7 +35,7 @@ This is simple JavaScript logic to censor certain words in certain text using Re
       - [8.2 Mark @gmail, number, symbol and badword](#82-mark-gmail-number-symbol-and-badword)
       - [8.3 Error empty message](#83-error-empty-message)
       - [8.4 Error not allowed message](#84-error-not-allowed-message)
-    - [9. How do I Contribute](#9-how-do-i-contribute)
+    - [9. How do I Contribute?](#9-how-do-i-contribute)
       - [9.1 Adding Bad Word](#91-adding-bad-word)
       - [9.2 Validate Your New Bad Word](#92-validate-your-new-bad-word)
       - [9.3 Running Unit Testing](#93-running-unit-testing)
@@ -259,7 +259,7 @@ Available Files:  [
 [✓] Update success ./example/src/function/inputRule.js
 ```
 
-If the output message is "Not Available File" type `npm run prod` and type the command `npm run` check again
+If the output message is "Not Available File" type `npm run prod` and type the command `npm run check` again.
 
 ```sh
 > misoh@1.0.0 check
@@ -275,6 +275,8 @@ Type: npm run prod
 ```sh
 npm start
 ```
+
+[[Back to Table of Contents]](#table-of-contents)
 
 ### 8. Feature Example App
 
@@ -298,7 +300,9 @@ Example if you type `<script></script>`.
 
 ![image](https://github.com/naufal-yafi/misoh/assets/87789251/e3fa8316-a7b0-4310-bcaf-01651dfc6a48)
 
-### 9. How do I Contribute
+[[Back to Table of Contents]](#table-of-contents)
+
+### 9. How do I Contribute?
 
 #### 9.1 Adding Bad Word
 
