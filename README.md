@@ -6,6 +6,8 @@ This is simple JavaScript logic to censor certain words in certain text using Re
 
 [![Download Latest Version](https://img.shields.io/badge/Download%20Latest%20Version-blue?style=for-the-badge&logo=javascript&logoColor=fafafa)](https://github.com/naufal-yafi/misoh/releases/download/misoh-20230731/misoh-20230731-1305.bundle.minify.js)
 
+[![Live Demo](https://img.shields.io/badge/Live%20Demo-black?style=for-the-badge)](https://naufal-yafi.github.io/misoh/)
+
 ### Table of Contents
 
 - [Misoh](#misoh)
